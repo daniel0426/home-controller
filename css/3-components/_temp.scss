@@ -1,0 +1,196 @@
+
+.temp-bg {
+    position: relative;
+    width: 50%;
+    max-width: 350px;
+    min-width: 300px;
+    margin: 2.5em auto 1em auto;
+    height: 25vh;
+    border-radius: 8px;
+    border: 2px solid $darkBlue;
+    background-image: url('/asset/temp_bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0.8;
+
+    .current__container {
+        z-index:99;
+        position: absolute;
+        left: 5%;
+        bottom: 1%;
+        display: flex;
+        align-items: center;
+        color: $whiteColor;
+        .current {
+            margin-right: 6px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            .iconify{
+                margin-right: 5px;
+            }
+        }
+        .current__temp{
+            .iconify {
+                font-size: 0.9em;
+            }
+        }
+        .current__hmd {
+            .iconify {
+                font-size: 1.4em;
+            }
+        }
+        
+    }   
+}
+.temp-hmd__controller{
+    @include center(60%);
+    .temp-hmd-controller{
+        
+        width: 90%;
+        margin: 0 auto;
+        .subControl {
+            margin:0 10px 1em 15px;
+            width: 40%;
+            min-width: 40%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            // margin: 0 0 1em 0;
+            @include control(1em 0.2em 0.3em 0.2em, 1.8em, 0.8em, none, $serviceiconColor, $darkestBlue );
+            
+            .control__name {
+                color: $grayColor;
+                font-weight: 300;
+                margin: 1.3em 0 0.3em 0 ;
+            }
+            .controlBox {
+                opacity:0;
+                visibility:hidden;
+                background-color: $darkBlue;
+                position: absolute;
+                padding: 1em;
+                width: 130%;
+                height:100%;
+                top:0;
+                left:0;
+                z-index:-3;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                transition: all 0.3s ease-out;
+                span {
+                    color: $whiteColor;
+                    font-weight: 300;
+                    font-size: 1.8em;
+                    margin-bottom: 0.4em;
+                }
+                input[type='range'] {
+                    outline:none;
+                    -webkit-appearance: none;
+                    background-color: white;
+                    width: 80%;
+                    height: 4px;
+                    border-radius: 10px;
+                    
+                }
+                input[type='range']::-webkit-slider-thumb {
+                    width: 14px;
+                    -webkit-appearance: none;
+                    height: 14px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background: $whiteColor;
+                  }
+              
+
+            }
+        }
+        .mainControl.showing {
+            background-color : $brightBlue;
+            border-top-right-radius:0;
+            border-bottom-right-radius: 0;
+            .iconify {
+                color: $whiteColor;
+            }
+            .control__name{
+                color: $whiteColor;
+            }
+            .controlBox {
+                visibility:visible;
+                left:100%;
+                z-index:1;
+                opacity: 1;
+                
+            }
+        }
+    }
+    
+}
+
+.sub {
+    @include center;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    .temp-subControl {
+        width: 35%;
+        min-width: 30%;
+        margin:0 0.5em 0 0.5em;
+        // margin-right: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include control(0em 1.2em 0.3em 1.5em, 1.6em, 0.8em, none, $serviceiconColor, $darkestBlue );
+        .control__name{
+        color: $grayColor;
+        font-weight: 300;
+        margin: 1.3em 0 0.3em 0 ;
+        }
+        &:first-child {
+            .iconify {
+                font-size: 1.8em;
+            }
+        }
+    }
+    @include active;
+}
+
+@media screen and (max-width: 640px){
+    .title__container{
+        @include mainTitle;
+    }
+   
+    .image__container {
+        margin: 2em auto;
+        .image {
+            img{
+                height:100px;
+            }
+            span {
+                font-size: 0.8em;
+            }
+            .sub {
+                margin-top: 1em;
+                .iconify{
+                    font-size:1.3em;
+                }
+                .control__name {
+                   
+                    // border: 1px solid red;
+                    font-size: 0.7em;
+                }
+            }    
+        }
+
+
+    }
+    
+}

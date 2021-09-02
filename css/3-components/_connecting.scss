@@ -1,0 +1,32 @@
+
+
+.progress__container {
+    text-align:center;
+    color: $whiteColor;
+    margin: 5em;
+
+    img {
+        max-width: 100px;
+        width: 10%;
+        min-width: 70px;
+        animation: rolling 1.3s ease-in infinite;
+        @include rolling(rolling)
+    }
+    
+    .progress-num {
+        display: block;
+        margin-top: 1em;
+        font-size: 1.2em;
+        font-weight: 300;
+    }
+
+    
+}
+
+.progress__desc{
+    color: $whiteColor;
+    text-align:center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    }

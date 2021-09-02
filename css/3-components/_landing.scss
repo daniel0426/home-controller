@@ -1,0 +1,90 @@
+
+    
+    .logo {
+            @include center;
+        display: block;
+        border-radius: 10px;
+        margin:3rem auto 0 auto;
+        
+    }
+    .landing-title {
+        
+        color: $whiteColor;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 2em;
+        text-align: center;
+        letter-spacing: 0.1em;
+    } 
+    .title1 {
+        margin-top: 3em;
+    }
+    .title2 {
+        margin-left: 2em;
+        margin-bottom: 3em;
+
+    }
+    .form {
+        @include center;
+        .input__container {
+            width: 100%;
+            position:relative;
+            display:flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            .iconify {
+                
+                position: absolute;
+                left: 5%;
+                color: $buttonColor;
+                
+            }
+        }
+        input, button{
+            width: 100%;
+            height:100%;
+            padding: 1em 4em;
+            
+            border:none;
+            border-radius: 5px;
+            
+            outline:none;
+        }
+        input {
+            background-color: $darkBlue;
+            color: $whiteColor;
+            cursor: text;
+        }
+        input::placeholder {
+            color: $buttonColor;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: $buttonColor;
+            a {
+                color: $darkBlue;
+                text-transform: uppercase;
+                font-weight: bolder;
+                font-size: 1.2em;
+                letter-spacing: 0.2em;
+            }
+        }
+        
+    }
+
+
+
+@media screen and(max-width:500px){
+    
+    .landing-title{
+        font-size:1.3em;
+        .title1{
+            margin-top: 1em;
+
+        }
+        .title2{
+            margin-bottom:1em;
+        }
+    }
+}

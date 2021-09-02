@@ -1,0 +1,103 @@
+.rating__container {
+    @include center;
+    margin: 2em auto;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+    .rating{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $lightgreenColor;
+        border-radius: 50%;
+        padding: 1em;
+       width: 70px;
+       height: 70px;
+       color: $whiteColor;
+       text-align: center;
+       span{
+           font-weight: 300;
+           letter-spacing: 1px;
+       }
+        
+    }
+    .rating-desc {
+        color: $greenColor;
+        letter-spacing: 1px;
+        font-weight: 300;
+        margin-top: 2em;
+    }
+}
+.graph__container {
+    @include center;
+    text-align: center;
+    .graph-title {
+        color: $whiteColor;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+    }
+    img {
+        width: 60%;
+        
+    }
+}
+.consider__container {
+    max-width: 550px;
+    background-color: $darkBlue;
+    padding: 1em;
+    width: 80%;
+    margin : 4em auto 2em auto;
+    .consider-title {
+        color: $whiteColor;
+        margin-bottom: 1em;
+        font-weight: 400;
+        letter-spacing: 1px;;
+    }
+    .consider-desc {
+        display: flex;
+        align-items: center;
+        .iconify {
+            
+            width: 40px;
+            min-width: 30px;
+            height: 35px;
+            min-height: 25px;
+            border-radius: 50%;
+            background-color: $grayColor;
+            margin-right: 1em;
+        }
+        p {
+            color: $whiteColor;
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .graph__container {
+        margin-top: 2em;
+        .graph-title {
+        
+            font-size: 1em;
+        }
+    }
+ 
+    .consider__container {
+        
+        width: 80%;
+        margin: 2em auto 0 auto;
+        h3 {
+            font-size: 0.9em;
+        }
+        .consider-desc {
+            p {
+                font-size: 0.7em;
+            }
+        }
+    }
+    
+}

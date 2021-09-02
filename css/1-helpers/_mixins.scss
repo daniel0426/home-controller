@@ -1,0 +1,43 @@
+
+@mixin control($padding:1em, $iconSize: 1.4em, $fontSize: 1em, $textTransform:uppercase, $color:$grayColor, $backgroundColor:$darkgrayColor ){
+    padding: $padding;
+    border-radius: 8px;
+    color: $color;
+    background-color: $backgroundColor;
+    cursor:pointer;
+    .iconify{
+        font-size: $iconSize;
+    }
+
+    .control__name{
+        color: $color;
+        font-size: $fontSize;
+        font-weight: 300;
+        text-transform: $textTransform;
+    }
+
+}
+@mixin active($iconColor :$whiteColor){
+    .subControl.active {
+        // transition: all 0.2s ease-in;
+        opacity:1;
+        color: $whiteColor;
+        background-color: $brightBlue;
+        .iconify {
+            color: $iconColor;
+        }
+        .control__name {
+            color: $whiteColor;
+        }
+    }
+}
+@mixin mainTitle {
+    font-size: 0.8em;
+}
+
+@mixin center($width:50%,$maxWidth: 400px, $minWidth: 300px) {
+    width: $width;
+    margin: 0 auto;
+    max-width: $maxWidth;
+    min-width: $minWidth;
+}

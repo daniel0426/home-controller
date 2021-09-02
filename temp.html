@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⌬ HJ Automation.ltd - Temp</title>
+    <meta name="keywords" content="home, automation, technology">
+    <meta name="author" content="Daniel Chung">
+    <meta name="reply-to" content='angus9209@gmail.com'>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js" defer></script>
+    <script src="./js/time.js" defer></script>
+    <script src="./js/controlBtn.js" defer></script>
+    <script src="./js/tempControl.js" defer></script>
+    
+    <style>
+        @media screen and (max-width:600px){
+            .sub .subControl {
+            margin:1em;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-container">
+            <li class="nav__item">
+                 <i class="fas fa-signal"></i>
+                 <span>Spark NZ 4G</span>
+            </li>
+            <li class="nav__item">
+                <span class="time">11:15 AM</span>
+            </li>
+            <li class="nav__item">
+             <i class="fas fa-battery-three-quarters"></i>
+            </li>
+        </ul>
+    </nav> 
+    <main class="wrapper">
+        <div class="title__container">
+            <a href="home.html"><span class="iconify" data-inline="false" data-icon="bx:bxs-left-arrow"></span></a>
+            <h2 class="control-title">Temp / HMD</h2>
+        </div>
+        <div class="temp-bg">
+            <ul class="current__container">
+                <li class="current__temp current">
+                    <span class="iconify" data-inline="false" data-icon="fa-solid:temperature-low"></span>
+                    <span class="temp">21&#8451;</span>
+                </li>
+                <li class="current__hmd current">
+                    <span class="iconify" data-inline="false" data-icon="iwwa:humidity"></span>
+                    <span class="humidity">48%</span>
+                </li>
+            </ul>
+        </div>
+        <ul class="temp-hmd__controller">
+            <li class="temp-hmd-controller">
+                <div class="subControl mainControl">
+                    <span class="iconify" data-inline="false" data-icon="mdi:air-conditioner"></span>
+                    <span class="control__name">Air Conditioner</span>
+                    <div class="temp-control__box controlBox">
+                        <span class="wantedTemp">25&#8451;</span>
+                        <input  type="range" name="temp" min='15' max="33" step='1' oninput="sliderTempChange(this.value)">
+                    </div>
+                </div>
+               
+                
+            </li>
+            <li class="temp-hmd-controller">
+                <div class="subControl mainControl">
+                    <span class="iconify" data-inline="false" data-icon="wi:humidity"></span>
+                    <span class="control__name">Dehumidifier</span>
+                    <div class="hmd-control__box controlBox">
+                        <span class="wantedHumid">48 %</span>
+                        <input type="range" name='hmd' min='15' max='55' step='1'  oninput="sliderHmdChange(this.value)">
+                    </div>
+                </div>
+               
+            </li>
+        </ul>
+        <ul class="sub">
+            <li class="subControl click temp-subControl">
+                <span class="iconify" data-inline="false" data-icon="mdi:air-purifier"></span>
+                <span class="control__name">Air Purifier</span>
+            </li>
+            <li class="subControl click temp-subControl">
+                <span class="iconify" data-inline="false" data-icon="si-glyph:curtain"></span>
+                <span class="control__name">Auto Blind</span>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

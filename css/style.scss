@@ -1,0 +1,22 @@
+
+// 1-HELPERS
+@import '1-helpers/variables';
+@import '1-helpers/mixins';
+@import '1-helpers/animation';
+
+//2- LAYOUTS
+@import '2-layout/reset';
+@import '2-layout/layout';
+
+//3- COMPONENTS
+@import '3-components/nav';
+@import '3-components/landing';
+@import '3-components/connecting';
+@import '3-components/home';
+@import '3-components/lighting';
+@import '3-components/temp';
+@import '3-components/security';
+@import '3-components/garage';
+@import '3-components/statistics';
+@import '3-components/setting';
+

@@ -1,0 +1,67 @@
+.settings {
+    width: 30%;
+    max-width: 200px;
+    min-width: 150px;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    
+    position:absolute;
+    left: 12%;
+    
+    .setting {
+        // border: 1px solid
+        cursor: pointer;
+        color: $grayColor;
+        margin-bottom: 2em;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        .iconify {
+            margin-right: 1em;
+            font-size: 2em;
+        }
+        .setting-title {
+            font-size:1.3em;
+        }
+        
+        &:hover {
+            filter: brightness(1.2);
+        }
+     
+    }
+    
+    .devider {
+        width: 40%;
+        border: 0.5px solid $grayColor;
+        margin-bottom: 2em;
+    }
+    
+}
+.version {
+    position:absolute;
+    bottom: 3%;
+    color: $grayColor;
+    left: 10%;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+@media screen and(max-width: 600px){
+    .settings {
+        
+        left: 16%;
+        .setting {
+            .iconify {
+                font-size: 1.2em
+            }
+            .setting-title {
+                font-size: 1em;
+            }
+        }
+    }
+   
+    .version {
+        font-size: 0.7em;
+    }
+}

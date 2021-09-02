@@ -1,0 +1,73 @@
+
+    
+    
+    .wrapper {
+
+        .garage__container {
+            @include center(60%, 500px, 300px);
+            margin: 2em auto;
+            text-align:center;
+            img {
+                width: 70%;
+                
+
+            }
+            .garage-controller {
+                display: flex;
+                justify-content: center;
+                
+                .garage-control{
+                    opacity: 0.7;
+                    cursor: pointer;
+                    padding: 1em;
+                    border-radius: 50%;
+                    margin: 2em 1em;
+                    transition: all 0.15s;
+        
+                    &:hover {
+                        opacity: 0.9;
+                        transform: scale(1.05);
+                    }
+                    .iconify{
+                        color: $whiteColor;
+                        font-size: 2em;
+                    }
+                }
+                .up {
+                    background-color: $darkgreenColor;
+                }
+                .down{
+                    background-color: $redColor;
+                }
+            }
+        }
+        
+        .subControl{
+            width: 20%;
+            margin: 4em auto;
+            max-width: 120px;
+            min-width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // border: 1px solid black;
+            
+            @include control(1em 0 0.3em 0, 1.6em, 0.8em, none, $serviceiconColor, $darkestBlue );
+           
+            .control__name{
+                color: $grayColor;
+                font-weight: 300;
+                margin: 1.3em 0 0.3em 0 ;
+                text-align: center;
+            }
+        
+        
+        }
+        @include active;
+    }
+
+
+
+
+
+
